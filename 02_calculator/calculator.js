@@ -1,18 +1,23 @@
+
+
+
 var createCalculator = function() {
-	var calculator = {};
-	var sum = 0;
-	calculator.value = function() {
-		return sum;
+	var newCalc = {};
+	newCalc.sum = 0;
+	newCalc.value = function() {
+		return this.sum;
+
 	};
-	calculator.add = function(x) {
-		sum = sum + x;
+	newCalc.add = function(x) {
+		this.sum += x;
 	}
-	calculator.subtract = function(x) {
-		sum = sum - x;
+	newCalc.subtract = function(x) {
+		this.sum = this.sum - x;
 	}
 	
 
-	return calculator;
+	return newCalc;
 
 };
 
+var calculator = createCalculator();
