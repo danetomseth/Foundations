@@ -29,8 +29,10 @@ var makeAdder = function(x) {
     return addFunc;
 };
 
+
 var once = function(func) {
 	var count = 0;
+	// only one function is needed to create a closure not two.  Right idea to return and create a new function.
    var changeFunc = function() {
        var stopOnce = function() {
        
@@ -40,6 +42,8 @@ var once = function(func) {
            count++;
        }
        else {
+       	// increment? this is a variable used in the test spec, what happens if you call once not in the test spec environment?
+       	// the once function returns a function the increment variable.
            increment = stopOnce;
        }
    };
