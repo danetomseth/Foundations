@@ -50,13 +50,16 @@ var once = function(func) {
 
 var createObjectWithTwoClosures = function() {
 	var createObj = function() {
+		debugger;
 	
 	var obj = {};
 		
 	obj.oneIncrementor = function(x) {
+		debugger;
 		
 	};
 	obj.tensIncrementor = function(x) {
+		debugger;
 		
 	};
 	obj.getValue = function() {
@@ -65,6 +68,13 @@ var createObjectWithTwoClosures = function() {
 	return obj;
 	};	
 	var objStore = createObj;
+	return objStore;
     
 };
+
+
+
+function createObjectWithTwoClosures(){
+	
+}
 
